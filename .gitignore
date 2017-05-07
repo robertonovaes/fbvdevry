@@ -1,12 +1,23 @@
-*.class
+import java.util.Scanner;
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+public class exercicio {
 
-# Package Files #
-*.jar
-*.war
-*.ear
+	public static void main(String[] args) {
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+		Scanner sc = new Scanner(System.in);
+
+		int numero;
+
+		System.out.println("Digite um número de 0 a 100");
+		numero = sc.nextInt();
+
+		do {
+			if (numero >= 1 && numero <= 100)
+				System.out.println("Valor correto");
+			else {
+				System.out.println("Valor invalido, tente novamente");
+			}
+		} while (numero < 1 || numero > 100);
+
+	}
+}
